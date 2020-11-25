@@ -1,0 +1,11 @@
+{
+  "name": "whotube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "dongwantak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
