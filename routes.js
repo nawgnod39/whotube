@@ -22,6 +22,7 @@ const routes = {
   logout: LOGOUT,
   search: SEARCH,
   users: USERS,
+  userDetail: USER_DETAIL,
   userDetail: id => {
     if (id) {
       return `/users/${id}`;
@@ -33,6 +34,7 @@ const routes = {
   changePassword: CHANGE_PASSWORD,
   videos: VIDEOS,
   upload: UPLOAD,
+  videoDetail: VIDEO_DETAIL,
   videoDetail: id => {
     if (id) {
       return `/videos/${id}`;
@@ -43,5 +45,4 @@ const routes = {
   editVideo: EDIT_VIDEO,
   deleteVideo: DELETE_VIDEO
 };
-
 export default routes;

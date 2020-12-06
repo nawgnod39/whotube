@@ -9,6 +9,7 @@ import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
 
+
 const app = express(); //app변수를 선언해서 express를 실행시킴 
 
 app.use(helmet());
@@ -16,6 +17,7 @@ app.use(function(req, res, next) {
     res.setHeader("Content-Security-Policy", "script-src 'self' https://archive.org");
     return next();
     });
+    
 app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -24,8 +26,8 @@ app.use(morgan("dev"));
 app.use(localsMiddleware);
 
 
+
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
-
-export default app;
+export default app; 
